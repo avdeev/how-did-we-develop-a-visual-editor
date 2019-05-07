@@ -32,8 +32,8 @@
     "shower-core": "^2.1.0"
   },
   "devDependencies": {
-    "path-exists-cli": "^1.0.0",
-    "@shower/cli": "^0.2.6"
+    "@shower/cli": "^0.2.7",
+    "path-exists-cli": "^1.0.0"
   },
   "scripts": {
     "pdf": "shower pdf",
