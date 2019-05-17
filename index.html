@@ -210,10 +210,6 @@
         <h2 class="shout" style="font-size: 4.6em;">декабрь 2016</h2>
     </section>
 
-    <section class="slide clear">
-        <img class="cover" src="pictures/contributing.png" alt="">
-    </section>
-
     <!-- Придумываем формат контента -->
 
     <section class="slide clear">
@@ -266,7 +262,7 @@
         <pre style="font-size: 0.9em">
             <code class="next">{ blockMap: { '4iabc': {</code>
             <code class="next">    type: 'unstyled',</code>
-            <code class="next">    text: 'АБ',</code>
+            <code class="next">    <mark>text: 'АБ'</mark>,</code>
             <code class="next">    characterList: [</code>
             <code class="next">      { style: ['ITALIC'], entity: null },</code>
             <code class="next">      { style: ['BOLD','ITALIC'], entity: null },</code>
@@ -282,6 +278,57 @@
 
     <section class="slide clear">
         <img class="cover" src="pictures/jsonschema.png" alt="">
+    </section>
+
+    <section class="slide">
+        <h2 class="shout" style="font-size: 4.6em;">Реализация</h2>
+    </section>
+
+    <section class="slide">
+        <h2>Берём</h2>
+        <ol style="font-size: 1.3em;">
+            <li class="next">React</li>
+            <li class="next">Immutable.js</li>
+            <li class="next">Redux</li>
+            <li class="next">Redux-saga</li>
+            <li class="next">Senior Frontend Developer</li>
+            <li class="next">План</li>
+        </ol>
+    </section>
+
+    <section class="slide clear">
+        <img class="cover" src="pictures/contributing.png" alt="">
+    </section>
+
+    <!-- Можно дописать интересных моментов во время реализации -->
+
+    <section class="slide clear">
+        <img class="cover" src="pictures/editor-example.png" alt="">
+    </section>
+
+    <section class="slide clear">
+        <img class="cover" src="pictures/editor-example-widget.png" alt="">
+    </section>
+
+    <section class="slide">
+        <h2 class="shout" style="font-size: 4.6em;">Встраиваем</h2>
+    </section>
+
+    <section class="slide">
+        <h2>Как можно встроить?</h2>
+        <ol style="font-size: 2em;">
+            <li class="next">Ctr+C, Ctrl+V</li>
+            <li class="next">Веб-компонента</li>
+            <li class="next">Iframe</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout" style="font-size: 4.6em;">Производительность</h2>
+    </section>
+
+    <section class="slide clear">
+        <img class="cover" src="pictures/editor-example-redux.png" alt="">
     </section>
 
     <section class="slide">
@@ -331,6 +378,52 @@
             <code class="next">}</code>
         </pre>
     </section>
+
+    <!-- А если у нас уже React? -->
+
+    <section class="slide">
+        <h2 class="shout" style="font-size: 4.6em;">Рендеринг</h2>
+    </section>
+
+    <section class="slide">
+        <h2>Где надо выводить?</h2>
+        <ol style="font-size: 1.5em;">
+            <li class="next">Сайт life.ru (сервер и клиент)</li>
+            <li class="next">Android-приложение</li>
+            <li class="next">iOS-приложение</li>
+            <li class="next">RSS-ленты</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2>Выбираем только поддерживаемые блоки</h2>
+        <pre>
+            <code class="next">content.filter(block => (</code>
+            <code class="next">  <mark>['HEADING', 'TEXT']</mark>.includes(block.type)</code>
+            <code class="next">))</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Есть ли видео?</h2>
+        <pre>
+            <code class="next">content.some(block => )</code>
+            <code class="next">  <mark>block.type === 'VIDEO'</mark></code>
+            <code class="next">))</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Рендерим контент draftjs</h2>
+
+        <h2 class="shout" style="font-size: 3.5em;">
+            <a href="https://github.com/nikgraf/awesome-draft-js">nikgraf/awesome-draft-js</a>
+        </h2>
+    </section>
+
+    <!-- Что есть сейчас на рынке -->
+
+    <!-- Возможное будущее редактора -->
 
     <!-- Schema-Ver -->
     <section class="slide">
@@ -409,25 +502,8 @@
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Встраиваем</h2>
+        <h2 class="shout" style="font-size: 4.6em;">Что же такое мы сделали?</h2>
     </section>
-
-    <!-- Делаем сервис (встраивание) -->
-
-    <section class="slide">
-        <h2>Как можно встроить?</h2>
-        <ol style="font-size: 2em;">
-            <li class="next">Ctr+C, Ctrl+V</li>
-            <li class="next">Веб-компоненты</li>
-            <li class="next">Iframe</li>
-        </ol>
-    </section>
-
-    <!-- А если у нас уже React? -->
-
-    <!-- Что есть сейчас на рынке -->
-
-    <!-- Возможное будущее редактора -->
 
     <section class="slide">
         <h2 class="shout" style="font-size: 4.6em;">WYSIWYG <br>vs <br>WYSIWYM</h2>
