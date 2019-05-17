@@ -243,7 +243,6 @@
             <code class="next">Lorem ipsum <mark>&lt;b&gt;dolor&lt;/b&gt;</mark> sit amet</code>
             <code class="next">Lorem ipsum <mark>&lt;s href=""&gt;dolor&lt;/a&gt;</mark> sit amet</code>
             <code class="next">Lorem ipsum <mark>&lt;a href=""&gt;dolor&lt;/a&gt;</mark> sit amet</code>
-            <code class="next">Lorem ipsum <mark>&lt;a href=""&gt;dolor&lt;/a&gt;</mark> sit amet</code>
         </pre>
     </section>
 
@@ -276,8 +275,13 @@
         </pre>
     </section>
 
+    <!-- JSON Schema -->
     <section class="slide">
         <h2 class="shout" style="font-size: 4.6em;">Документация</h2>
+    </section>
+
+    <section class="slide clear">
+        <img class="cover" src="pictures/jsonschema.png" alt="">
     </section>
 
     <section class="slide">
@@ -328,18 +332,16 @@
         </pre>
     </section>
 
-    <!-- JSON Schema -->
-
     <!-- Schema-Ver -->
     <section class="slide">
         <h2 class="shout" style="font-size: 4.6em;">Как быть с изменениями?</h2>
     </section>
 
     <section class="slide">
-        <figure class="place" style="font-size: 1.7em;">
+        <figure class="place" style="font-size: 1.6em;">
           <blockquote>
             <p>
-                There are only two types of developer: the developer who versions his code, and developer_new_newer_newest_v2
+                Все разработчики делятся на два типа: кто <b>версионирует</b> их код и&nbsp;кто <b>проект_последний_финал_самый_v2</b>
             </p>
           </blockquote>
         </figure>
@@ -351,16 +353,30 @@
         <h2 class="shout" style="font-size: 4.6em;">MAJOR.MINOR.PATCH</h2>
     </section>
 
+    <section class="slide">
+        <h2>Семантическое версионирование (SemVer)</h2>
+        <ol style="font-size: 1.1em;">
+            <li class="next"><b>МАЖОРНАЯ</b>, когда сделаны обратно несовместимые изменения API</li>
+            <li class="next"><b>МИНОРНАЯ</b>, когда вы добавляете новую функциональность, не нарушая обратной совместимости</li>
+            <li class="next"><b>ПАТЧ</b>, когда вы делаете обратно совместимые исправления</li>
+        </ol>
+    </section>
+
     <section class="slide clear">
         <img class="cover" src="pictures/дрейк-комикс-оригинал.jpeg" alt="">
     </section>
 
-    <section class="slide clear">
-        <img class="cover" src="pictures/jsonschema.png" alt="">
+    <section class="slide">
+        <h2 class="shout" style="font-size: 4.6em;">MODEL-REVISION-ADDITION</h2>
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">MODEL-REVISION-ADDITION</h2>
+        <h2>SchemaVer</h2>
+        <ol style="font-size: 1.1em;">
+            <li class="next"><b>МОДЕЛЬ</b>, когда вы вносите критическое изменение схемы, которое предотвратит взаимодействие с любыми историческими данными</li>
+            <li class="next"><b>РЕВИЗИЮ</b>, когда вы вносите изменение схемы, которое может помешать взаимодействию с некоторыми историческими данными</li>
+            <li class="next"><b>ДОПОЛНЕНИЕ</b> при внесении изменений в схему, совместимых со всеми историческими данными</li>
+        </ol>
     </section>
 
     <section class="slide">
@@ -396,17 +412,16 @@
         <h2 class="shout" style="font-size: 4.6em;">Встраиваем</h2>
     </section>
 
+    <!-- Делаем сервис (встраивание) -->
+
     <section class="slide">
         <h2>Как можно встроить?</h2>
-        <ol style="font-size: 1.4em;">
-            <li class="next">Веб-ком</li>
-            <li class="next">Легко добавлять новые типы контента</li>
-            <li class="next">Легко чистить, валидировать, обрабатывать</li>
-            <li class="next">Современный блочный редактор</li>
+        <ol style="font-size: 2em;">
+            <li class="next">Ctr+C, Ctrl+V</li>
+            <li class="next">Веб-компоненты</li>
+            <li class="next">Iframe</li>
         </ol>
     </section>
-
-    <!-- Делаем сервис (встраивание) -->
 
     <!-- А если у нас уже React? -->
 
