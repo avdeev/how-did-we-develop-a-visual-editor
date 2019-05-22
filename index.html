@@ -69,8 +69,10 @@
             <li class="next">🏙️ Из Нижнего Новгорода, работаю в Москве</li>
             <li class="next">🌐 <a href="https://neuron.digital/">Neuron.Digital</a></li>
             <li class="next">👔 Руковожу командой из 8 фронтенд-разработчиков</li>
+            <!-- больше про команду -->
             <li class="next">👴 Программирую с 2002 года</li>
             <li class="next">🤹 Всеяден (React, Vue, Svelte, Javascript 😊)</li>
+            <!-- реактом никого уже не удивишь -->
         </ol>
     </section>
 
@@ -155,8 +157,8 @@
     <section class="slide">
         <h2>Нужен богатый контент!</h2>
         <ol>
-            <li class="next">Лонгриды такие</li>
-            <li class="next">Лонгриды другие</li>
+            <li class="next">Лонгриды</li>
+            <li class="next">Цитаты</li>
             <li class="next">Интерактивные виджеты</li>
             <li class="next">Панорамные видео</li>
             <li class="next">Стримы</li>
@@ -164,36 +166,42 @@
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Картинка<br>с описанием</h2>
-    </section>
-
-    <section class="slide clear">
-        <img class="cover" src="pictures/image-with-description.png" alt="">
-    </section>
-
-    <section class="slide">
-        <h2>Картинка с описанием</h2>
+        <h2>Что это?</h2>
         <pre>
-            <code>&lt;p&gt;</code>
-            <code>&lt;img class=&quot;&quot; src=&quot;...&quot; alt=&quot;&quot;</code>
-            <code>  <mark>data-extra-description</mark>=&quot;</code>
-            <code>    &amp;lt;p&amp;gt;Фото: &amp;amp;copy; L!FE&amp;lt;/p&amp;gt;</code>
-            <code>  &quot;</code>
-            <code>&gt;</code>
-            <code>&lt;/p&gt;</code>
+            <code>&lt;div <mark>class=&quot;quote&quot;</mark>&gt;</code>
+            <code>  &lt;div&gt;Мы с вами дИвелоперы&lt;/div&gt;</code>
+            <code>  &lt;div&gt;Вадим Макеев&lt;/div&gt;</code>
+            <code>&lt;/div&gt;</code>
         </pre>
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Сторонний виджет</h2>
+        <h2>Цитата</h2>
+        <img src="pictures/quote-example.png" alt="" style="max-height: calc(100% - 150px); margin: 0 auto; display: block;">
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Широкая картинка-заголовок</h2>
+        <h2>Что это?</h2>
+        <code>
+            &lt;p&gt;&lt;iframe class=&quot;medialib-video&quot; title=&quot;&quot; src=&quot;//embed.life.ru/video/b271fca5ff74420e78893b94cce071ca&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; <mark>data-extra-autoplay=&quot;0&quot; data-extra-loop=&quot;0&quot; data-extra-title=&quot;&quot; data-extra-description=&quot;&quot; data-extra-send-to-rss=&quot;0&quot;</mark>&gt;&lt;/iframe&gt;&lt;/p&gt;
+        </code>
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Широкая картинка</h2>
+        <h2>Видео с настройками</h2>
+        <img src="pictures/example-video.png" alt="" style="max-height: calc(100% - 150px); margin: 0 auto; display: block;">
+    </section>
+
+    <section class="slide">
+        <h2>Что это?</h2>
+        <code style="word-break: break-word;">
+            &lt;div class=&quot;tiny-mce-plugin-societywidget mceNonEditable&quot; data-mce-contenteditable=&quot;false&quot; <mark>data-society-code=&quot;PGJsb2NrcXVvdGUgY2xhc3M9InR3aXR0ZXItdHdlZXQiIGRhdGEtbGFuZz0...sb2NrcXVvdGU+CjxzY3JpcHQgYXN5bmMgc3JjPSIvL3BsYXRmb3JtLnR3aXR0ZXIuY29tL3dpZGdldHMuanMiIGNoYXJzZXQ9InV0Zi04Ij48L3NjcmlwdD4=</mark>&quot;&gt;
+        </code>
+    </section>
+
+    <section class="slide">
+        <h2>Виджет</h2>
+        <img src="pictures/example-widget.png" alt="" style="max-height: calc(100% - 150px); margin: 0 auto; display: block;">
     </section>
 
     <section class="slide">
@@ -238,7 +246,6 @@
     <section class="slide">
         <h2>Нормальный план</h2>
         <ol style="font-size: 0.9em;">
-            <li class="next">Убедить заказчика в необходимости</li>
             <li class="next">Продумать формат контента</li>
             <li class="next">Написать документацию по формату</li>
             <li class="next">Реализовать редактор</li>
@@ -252,28 +259,32 @@
     <section class="slide">
         <h2>Нормальный план</h2>
         <ol>
-            <li class="next"><b>Убедить заказчика в необходимости</b></li>
-            <li class="next">Продумать формат контента</li>
-            <li class="next">Написать документацию по формату</li>
-            <li class="next">Реализовать редактор</li>
-            <li class="next">Встроить редактор в приложение</li>
-            <li class="next">Мигрировать старый контент</li>
-            <li class="next">Жить с двумя редакторами</li>
-            <li class="next">Выпилить старый редактор</li>
+            <li><b>Убедить заказчика в необходимости</b></li>
+            <li>Продумать формат контента</li>
+            <li>Написать документацию по формату</li>
+            <li>Реализовать редактор</li>
+            <li>Встроить редактор в приложение</li>
+            <li>Мигрировать старый контент</li>
+            <li>Жить с двумя редакторами</li>
+            <li>Выпилить старый редактор</li>
         </ol>
+    </section>
+
+    <section class="slide clear">
+        <img class="cover" src="pictures/Life_News_Newsdesk.jpg" alt="">
     </section>
 
     <section class="slide">
         <h2>Нормальный план</h2>
         <ol>
-            <li class="next">Убедить заказчика в необходимости</li>
-            <li class="next"><b>Продумать формат контента</b></li>
-            <li class="next">Написать документацию по формату</li>
-            <li class="next">Реализовать редактор</li>
-            <li class="next">Встроить редактор в приложение</li>
-            <li class="next">Мигрировать старый контент</li>
-            <li class="next">Жить с двумя редакторами</li>
-            <li class="next">Выпилить старый редактор</li>
+            <li>Убедить заказчика в необходимости</li>
+            <li><b>Продумать формат контента</b></li>
+            <li>Написать документацию по формату</li>
+            <li>Реализовать редактор</li>
+            <li>Встроить редактор в приложение</li>
+            <li>Мигрировать старый контент</li>
+            <li>Жить с двумя редакторами</li>
+            <li>Выпилить старый редактор</li>
         </ol>
     </section>
 
