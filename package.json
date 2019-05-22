@@ -32,7 +32,7 @@
     "shower-core": "^2.1.0"
   },
   "devDependencies": {
-    "@shower/cli": "^0.2.7",
+    "@shower/cli": "^0.2.8",
     "path-exists-cli": "^1.0.0"
   },
   "scripts": {

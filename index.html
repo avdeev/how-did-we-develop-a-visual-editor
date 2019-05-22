@@ -110,7 +110,7 @@
         <pre>
             <code>Привет, РИТ++! Как дела?</code>
             <code class="next">Привет, РИТ++! <mark>&lt;strong&gt;Как&lt;/strong&gt;</mark> дела?</code>
-            <code class="next">Привет, РИТ++! <mark>&lt;a href=""&gt;Как&lt;/a&gt;</mark> дела?</code>
+            <code class="next">Привет, РИТ++! <mark>&lt;a href="#"&gt;Как&lt;/a&gt;</mark> дела?</code>
             <code class="next">Привет, РИТ++! Как дела?<mark>&lt;br/&gt;&lt;br/&gt;</mark></code>
             <code class="next"><mark>&lt;p align=justify&gt;</mark>Привет, РИТ++! Как дела?<mark>&lt;/p&gt;</mark></code>
             <code class="next">Привет, <mark>&lt;font size=4&gt;</mark>РИТ++!<mark>&lt;/font&gt;</mark>Как дела?</code>
@@ -507,7 +507,7 @@
     <section class="slide">
         <h2>👌 Было</h2>
         <pre>
-            <code class="next">{</code>
+            <code>{</code>
             <code class="next">  title: "Название статьи",</code>
             <code class="next">  <mark>content: "&lt;p&gt;Тут какой-то старый контент&lt;/p&gt;",</mark></code>
             <code class="next">}</code>
@@ -517,7 +517,7 @@
     <section class="slide">
         <h2>👌 Стало</h2>
         <pre>
-            <code class="next">{</code>
+            <code>{</code>
             <code class="next">  title: "Название статьи",</code>
             <code class="next">  content: {</code>
             <code class="next">    content: "&lt;p&gt;Тут какой-то старый контент&lt;/p&gt;",</code>
@@ -579,21 +579,71 @@
     </section>
 
     <section class="slide">
-        <h2>Где надо выводить?</h2>
-        <ol style="font-size: 1.5em;">
-            <li>Сайт life.ru (сервер и клиент)</li>
-            <li class="next">Android-приложение</li>
-            <li class="next">iOS-приложение</li>
-            <li class="next">RSS-ленты</li>
+        <h2>Схема рендера контента</h2>
+        <ol>
+            <li>В цикле перебираем все блоки</li>
+            <li class="next">Каждый блок передаём в свой шаблон</li>
+            <li class="next">Draft.js рендерим дополнительно</li>
         </ol>
+    </section>
+
+    <section class="slide">
+        <h2>Сайт life.ru (сервер, Go)</h2>
+        <pre style="font-size: 0.85em;">
+            <code>func FormatJSON(content string, template *template.Template) string {</code>
+            <code>  contentBlocks := []Decorator{}</code>
+            <code>  var buffer bytes.Buffer</code>
+            <code>  for i, block := range contentBlocks {</code>
+            <code>    <mark>block.render(&buffer, template, i)</mark></code>
+            <code>  }</code>
+            <code>  return buffer.String()</code>
+            <code>}</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Сайт life.ru (клиент, CoffeeScript)</h2>
+        <pre style="font-size: 0.85em;">
+            <code>window.formatJSON = (content) -></code>
+            <code>  result = ''</code>
+            <code>  try contentBlocks = JSON.parse content</code>
+            <code>  return result if not contentBlocks</code>
+            <code>  for block, i in contentBlocks</code>
+            <code>    try result += <mark>BLOCK_TEMPLATES[block.type]?(block)</mark> || ''</code>
+            <code>  result</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Мобильные приложения (этап I)</h2>
+        <img src="pictures/mobile-1.png" alt="" style="max-height: calc(100% - 150px); margin: 0 auto; display: block;">
+    </section>
+
+    <section class="slide">
+        <h2>Мобильные приложения (этап II)</h2>
+        <img src="pictures/mobile-2.png" alt="" style="max-height: calc(100% - 150px); margin: 0 auto; display: block;">
+    </section>
+
+    <section class="slide">
+        <h2>RSS-ленты (Ruby)</h2>
+        <pre style="font-size: 0.85em;">
+            <code>items.select {|el| %w(TEXT).include?(el[:type]) }.each do |item|</code>
+            <code>  element = nil</code>
+            <code>  case item[:type]</code>
+            <code>  when 'TEXT'</code>
+            <code>    element = <mark>export(item[:value])</mark></code>
+            <code>  end</code>
+            <code>  result << element if element</code>
+            <code>end</code>
+        </pre>
     </section>
 
     <section class="slide">
         <h2>Выбираем только поддерживаемые блоки</h2>
         <pre>
             <code>content.filter(block => (</code>
-            <code class="next">  <mark>['HEADING', 'TEXT']</mark>.includes(block.type)</code>
-            <code class="next">))</code>
+            <code>  <mark>['HEADING', 'TEXT']</mark>.includes(block.type)</code>
+            <code>))</code>
         </pre>
     </section>
 
@@ -601,8 +651,8 @@
         <h2>Есть ли видео?</h2>
         <pre>
             <code>content.some(block => )</code>
-            <code class="next">  <mark>block.type === 'VIDEO'</mark></code>
-            <code class="next">))</code>
+            <code>  <mark>block.type === 'VIDEO'</mark></code>
+            <code>))</code>
         </pre>
     </section>
 
@@ -614,12 +664,9 @@
         </h2>
     </section>
 
-    <!-- Schema-Ver -->
     <section class="slide">
         <h2 class="shout" style="font-size: 4.6em;">Как быть с изменениями?</h2>
     </section>
-
-    <!-- Как быть c RICH-форматированием (markdown, draft-js) -->
 
     <section class="slide">
         <h2 class="shout" style="font-size: 4.6em;">MAJOR.MINOR.PATCH</h2>
