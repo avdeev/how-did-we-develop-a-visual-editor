@@ -366,8 +366,7 @@
             <code>  onChange = (editorState) => this.setState({ editorState });</code>
             <code>  render() {</code>
             <code>    return &lt;<mark>Editor</mark></code>
-            <code>      editorState={this.state.editorState}</code>
-            <code>      onChange={this.onChange}</code>
+            <code>      editorState={this.state.editorState} onChange={this.onChange}</code>
             <code>    /&gt;;</code>
             <code>  }</code>
             <code>}</code>
@@ -386,6 +385,10 @@
             <code>    ],</code>
             <code>}}}</code>
         </pre>
+    </section>
+
+    <section class="slide clear">
+        <img class="cover" src="pictures/draftjs-issue.png" alt="">
     </section>
 
     <section class="slide">
@@ -409,8 +412,6 @@
             <li>👨‍🎨 <b>Вывести</b> новый контент в приложения</li>
         </ol>
     </section>
-
-    <!-- JSON Schema -->
 
     <section class="slide">
         <img class="cover" src="pictures/jsonschema.png" alt="">
@@ -609,6 +610,14 @@
     </section>
 
     <section class="slide">
+        <h2 class="shout" style="font-size: 4.6em;">Производительность</h2>
+    </section>
+
+    <section class="slide clear" style="background-color: #353b46;">
+        <img class="cover" src="pictures/editor-example-redux.png" alt="">
+    </section>
+
+    <section class="slide">
         <h2>📆 Нормальный план</h2>
         <ol>
             <li>🤔 <b>Продумать</b> формат контента</li>
@@ -697,14 +706,6 @@
             <code>  <mark>block.type === 'VIDEO'</mark></code>
             <code>))</code>
         </pre>
-    </section>
-
-    <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Производительность</h2>
-    </section>
-
-    <section class="slide clear" style="background-color: #353b46;">
-        <img class="cover" src="pictures/editor-example-redux.png" alt="">
     </section>
 
     <section class="slide">
