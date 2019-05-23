@@ -358,7 +358,24 @@
     </section>
 
     <section class="slide">
-        <h2>👌 Формат Draft.js</h2>
+        <h2>👨‍🔬 Формат Draft.js</h2>
+        <pre style="font-size: 0.7em">
+            <code>import { <mark>Editor, EditorState</mark> } from 'draft-js';</code>
+            <code>class MyEditor extends React.Component {</code>
+            <code>  state = { editorState: <mark>EditorState.createEmpty()</mark> };</code>
+            <code>  onChange = (editorState) => this.setState({ editorState });</code>
+            <code>  render() {</code>
+            <code>    return &lt;<mark>Editor</mark></code>
+            <code>      editorState={this.state.editorState}</code>
+            <code>      onChange={this.onChange}</code>
+            <code>    /&gt;;</code>
+            <code>  }</code>
+            <code>}</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>👨‍🔬 Формат Draft.js</h2>
         <pre style="font-size: 0.9em">
             <code>{ blockMap: { '4iabc': {</code>
             <code>    type: 'unstyled',</code>
@@ -530,9 +547,9 @@
         <h2>👴 Было</h2>
         <pre>
             <code>{</code>
-            <code class="next">  title: "Название статьи",</code>
-            <code class="next">  <mark>content: "&lt;p&gt;Тут какой-то старый контент&lt;/p&gt;",</mark></code>
-            <code class="next">}</code>
+            <code>  title: "Название статьи",</code>
+            <code>  <mark>content: "&lt;p&gt;Тут какой-то старый контент&lt;/p&gt;",</mark></code>
+            <code>}</code>
         </pre>
     </section>
 
@@ -540,25 +557,25 @@
         <h2>👌 Стало</h2>
         <pre>
             <code>{</code>
-            <code class="next">  title: "Название статьи",</code>
-            <code class="next">  content: {</code>
-            <code class="next">    content: "&lt;p&gt;Тут какой-то старый контент&lt;/p&gt;",</code>
-            <code class="next">    content_type: <mark>"text/html"</mark>,</code>
-            <code class="next">  },</code>
-            <code class="next">}</code>
+            <code>  title: "Название статьи",</code>
+            <code>  content: {</code>
+            <code>    content: "&lt;p&gt;Тут какой-то старый контент&lt;/p&gt;",</code>
+            <code>    content_type: <mark>"text/html"</mark>,</code>
+            <code>  },</code>
+            <code>}</code>
         </pre>
     </section>
 
     <section class="slide">
         <h2>👌 Стало</h2>
         <pre>
-            <code class="next">{</code>
-            <code class="next">  title: "Название статьи",</code>
-            <code class="next">  content: {</code>
-            <code class="next">    content: "[]",</code>
-            <code class="next">    content_type: <mark>"application/json"</mark>,</code>
-            <code class="next">  },</code>
-            <code class="next">}</code>
+            <code>{</code>
+            <code>  title: "Название статьи",</code>
+            <code>  content: {</code>
+            <code>    content: "[]",</code>
+            <code>    content_type: <mark>"application/json"</mark>,</code>
+            <code>  },</code>
+            <code>}</code>
         </pre>
     </section>
 
