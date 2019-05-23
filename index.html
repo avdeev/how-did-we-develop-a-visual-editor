@@ -310,6 +310,43 @@
     </section>
 
     <section class="slide">
+        <h2 class="shout" style="font-size: 4.6em;">C JSON<br>просто работать</h2>
+    </section>
+
+    <section class="slide">
+        <h2>Выбираем только поддерживаемые блоки</h2>
+        <pre>
+            <code>content.filter(block => (</code>
+            <code>  <mark>['HEADING', 'TEXT']</mark>.includes(block.type)</code>
+            <code>))</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Есть ли видео?</h2>
+        <pre>
+            <code>content.some(block => )</code>
+            <code>  <mark>block.type === 'VIDEO'</mark></code>
+            <code>))</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Склеить весь текст?</h2>
+        <pre>
+            <code>content</code>
+            <code>  .filter(block => <mark>block.type === 'TEXT'</mark>)</code>
+            <code>  .reduce((accumulator, block) =></code>
+            <code>    <mark>accumulator + block.value</mark></code>
+            <code>  , '')</code>
+        </pre>
+    </section>
+
+    <section class="slide clear">
+        <img class="cover" src="pictures/kaif.png" alt="">
+    </section>
+
+    <section class="slide">
         <h2 class="shout" style="font-size: 4.6em;">Как форматировать текст?</h2>
     </section>
 
@@ -335,7 +372,7 @@
     </section>
 
     <section class="slide">
-        <h2 class="shout">Нужен JSON!</h2>
+        <h2 class="shout">Тоже JSON</h2>
     </section>
 
     <section class="slide clear" style="background-color: #51925d;">
@@ -677,24 +714,6 @@
             <code>  end</code>
             <code>  result << element if element</code>
             <code>end</code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <h2>Выбираем только поддерживаемые блоки</h2>
-        <pre>
-            <code>content.filter(block => (</code>
-            <code>  <mark>['HEADING', 'TEXT']</mark>.includes(block.type)</code>
-            <code>))</code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <h2>Есть ли видео?</h2>
-        <pre>
-            <code>content.some(block => )</code>
-            <code>  <mark>block.type === 'VIDEO'</mark></code>
-            <code>))</code>
         </pre>
     </section>
 
