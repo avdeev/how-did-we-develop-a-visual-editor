@@ -78,11 +78,6 @@
         <img class="cover w" src="pictures/back_to_the_future_part1.jpg" alt="">
     </section>
 
-    <!-- С чего всё началось, у нас появился проект -->
-    <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Итак, у нас появился Lifenews</h2>
-    </section>
-
     <section class="slide">
         <img class="cover" src="pictures/Internet_Archive_logo_and_wordmark.png" alt="" style="height: 70%;">
     </section>
@@ -241,6 +236,10 @@
         <img class="cover w" src="pictures/opossum.jpg" alt="">
     </section>
 
+    <section class="slide clear">
+        <img class="cover" src="pictures/word.jpeg" alt="">
+    </section>
+
     <section class="slide">
         <h2 class="shout" style="font-size: 4.6em;">HTML не подходит</h2>
     </section>
@@ -316,11 +315,11 @@
         <h2>👌 Начнём с формата</h2>
         <pre>
             <code>[</code>
-            <code class="next">  { <mark>type: "TEXT"</mark>, value: "Привет, РИТ++" },</code>
-            <code class="next">  { <mark>type: "TEXT"</mark>, value: "Давно не виделись" },</code>
-            <code class="next">  { <mark>type: "TEXT"</mark>, value: "Лови фотки!" },</code>
-            <code class="next">  { <mark>type: "GALLERY"</mark>, id: "3637" },</code>
-            <code class="next">]</code>
+            <code>  { <mark>type: "TEXT"</mark>, value: "Привет, РИТ++" },</code>
+            <code>  { <mark>type: "TEXT"</mark>, value: "Давно не виделись" },</code>
+            <code>  { <mark>type: "TEXT"</mark>, value: "Лови фотки!" },</code>
+            <code>  { <mark>type: "GALLERY"</mark>, id: "3637" },</code>
+            <code>]</code>
         </pre>
     </section>
 
@@ -340,7 +339,7 @@
     <section class="slide">
         <h2>Есть ли видео?</h2>
         <pre>
-            <code>content.some(block => )</code>
+            <code>content.some(block => (</code>
             <code>  <mark>block.type === 'VIDEO'</mark></code>
             <code>))</code>
         </pre>
@@ -351,9 +350,9 @@
         <pre>
             <code>content</code>
             <code>  .filter(block => <mark>block.type === 'TEXT'</mark>)</code>
-            <code>  .reduce((accumulator, block) =></code>
+            <code>  .reduce((accumulator, block) => (</code>
             <code>    <mark>accumulator + block.value</mark></code>
-            <code>  , '')</code>
+            <code>  ), '')</code>
         </pre>
     </section>
 
@@ -433,12 +432,16 @@
             <code>      { style: ['ITALIC'], entity: null },</code>
             <code>      { style: ['BOLD','ITALIC'], entity: null },</code>
             <code>    ],</code>
-            <code>}}}</code>
+            <code>} } }</code>
         </pre>
     </section>
 
     <section class="slide clear">
         <img class="cover" src="pictures/draftjs-issue.png" alt="">
+    </section>
+
+    <section class="slide clear">
+        <img class="cover" src="pictures/draftjs-prs.jpeg" alt="">
     </section>
 
     <section class="slide">
@@ -448,6 +451,25 @@
                 nikgraf/awesome-draft-js
             </a>
         </h2>
+    </section>
+
+    <section class="slide clear">
+        <img class="cover" src="pictures/draftjs-editors.png" alt="">
+    </section>
+
+    <section class="slide">
+        <h2>Итог</h2>
+        <pre>
+            <code>[{ type: "TEXT", value: {</code>
+            <code><mark>  blockMap: { '4iabc': {</mark></code>
+            <code><mark>    type: 'unstyled',</mark></code>
+            <code><mark>    text: '',</mark></code>
+            <code><mark>    characterList: [],</mark></code>
+            <code><mark>  } },</mark></code>
+            <code>}]</code>
+        </pre>
+
+        <img class="next" src="pictures/xzibit-original-meme.jpg" alt="" style="position: absolute; bottom: 0; right: 0; width: 400px;">
     </section>
 
     <section class="slide">
@@ -618,10 +640,6 @@
         <img class="cover" src="pictures/life-admin-example.png" alt="">
     </section>
 
-    <section class="slide clear">
-        <img class="cover" src="pictures/baza-integration-example.png" alt="">
-    </section>
-
     <section class="slide">
         <h2>📆 Нормальный план</h2>
         <ol>
@@ -673,6 +691,8 @@
             <code>  },</code>
             <code>}</code>
         </pre>
+
+        <img class="next" src="pictures/xzibit-original-meme.jpg" alt="" style="position: absolute; bottom: 0; right: 0; width: 400px;">
     </section>
 
     <section class="slide">
