@@ -95,11 +95,11 @@
         <pre style="font-size: 0.9em;">
             <code>{</code>
             <code>  title: "Название статьи",</code>
-            <code>  <mark>content: "</mark></code>
-            <code><mark>      Первый абзац &lt;strong&gt;контента&lt;/strong&gt;</mark></code>
-            <code><mark>&nbsp;</mark></code>
-            <code><mark>      Второй абзац контента</mark></code>
-            <code><mark>  ",</mark></code>
+            <code>  <mark>content</mark>: "</code>
+            <code>      Первый абзац &lt;strong&gt;контента&lt;/strong&gt;</code>
+            <code>&nbsp;</code>
+            <code>      Второй абзац контента</code>
+            <code>  ",</code>
             <code>}</code>
         </pre>
     </section>
@@ -132,10 +132,10 @@
         <h2>Обновили TinyMCE</h2>
         <pre>
             <code><mark>&lt;p&gt;</mark>Привет, РИТ++! Как дела?<mark>&lt;/p&gt;</mark></code>
-            <code class="next"><mark>&lt;div class=&quot;&quot;&gt;</mark></code>
+            <code class="next"><mark>&lt;div class=&quot;&quot;&gt;&lt;/div&gt;</mark></code>
             <code class="next"><mark>&lt;p&gt;&nbsp;&lt;/p&gt;</mark></code>
-            <code class="next"><mark>&lt;p&gt;&nbsp;&lt;/p&gt;</mark></code>
-            <code class="next"><mark>&lt;/div&gt;</mark></code>
+            <code class="next"><mark>&lt;span&gt;&nbsp;&lt;/span&gt;</mark></code>
+            <code class="next"><mark>&#x26;nbsp;&#x26;nbsp;&#x26;nbsp;&#x26;nbsp;&#x26;nbsp;</mark></code>
         </pre>
     </section>
 
@@ -160,13 +160,13 @@
         <pre style="font-size: 0.7em;">
             <code>{</code>
             <code>  title: "Название статьи",</code>
-            <code>  <mark>content: "&lt;ul&gt;</mark></code>
+            <code>  content: "<mark>&lt;ul&gt;</mark></code>
             <code><mark>    &lt;li&gt;</code>
             <code><mark>      &lt;span style=&quot;font-size: x-small;&quot;&gt;</mark></code>
             <code><mark>        &lt;span style=&quot;font-size:10px; line-height:16px;&quot;&gt;Элемент&lt;/span&gt;</mark></code>
             <code><mark>      &lt;/span&gt;</mark></code>
             <code><mark>    &lt;/li&gt;</mark></code>
-            <code><mark>  &lt;/ul&gt;",</mark></code>
+            <code><mark>  &lt;/ul&gt;</mark>",</code>
             <code>}</code>
         </pre>
     </section>
@@ -228,7 +228,7 @@
 
     <section class="slide">
         <h2>Персона</h2>
-        <img src="pictures/person.png" alt="" style="max-height: calc(100% - 150px); margin: 0 auto; display: block;">
+        <img src="pictures/person.png" alt="" style="max-height: calc(100% - 150px); width: 100%; margin: 0 auto; display: block;">
     </section>
 
     <section class="slide">
@@ -924,7 +924,7 @@
         <h2>👨‍🏫 Уроки</h2>
 
         <ol style="font-size: 1.1em;">
-            <li>💪 Всё возможно</li>
+            <li class="next">💪 Всё возможно</li>
             <li class="next">💭 Думайте о расширяемости</li>
             <li class="next">📆 Составляйте планы (дорожные карты)</li>
             <li class="next">📚 Вокруг множество хороших технологий</li>
