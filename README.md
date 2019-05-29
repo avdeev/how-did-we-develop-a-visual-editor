@@ -2,6 +2,6 @@
 
 Наша компания специализируется на порталах для СМИ, у нас в портфолио их несколько. Самый известный из них - Life.ru. Хочу рассказать историю про то, как мы создавали для него визуальный редактор, с какими проблемами столкнулись, и как это всё вообще работает.
 
-http://frontendconf.ru/moscow-rit/2019/abstracts/5059
+[Доклад в программе РИТ++](https://frontendconf.ru/moscow-rit/2019/abstracts/5059)
 
-https://alexey-avdeev.com/how-did-we-develop-a-visual-editor/
+[Слайды](https://alexey-avdeev.com/how-did-we-develop-a-visual-editor/)
