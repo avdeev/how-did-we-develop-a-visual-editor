@@ -5,3 +5,5 @@
 [Доклад в программе РИТ++](https://frontendconf.ru/moscow-rit/2019/abstracts/5059)
 
 [Слайды](https://alexey-avdeev.com/how-did-we-develop-a-visual-editor/)
+
+[Видео](https://www.youtube.com/watch?v=YIsbi5cMuQE)
