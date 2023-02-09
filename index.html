@@ -1,98 +1,159 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <title>Как мы делали свой визуальный (WYSIWYG) редактор статей для&nbsp;Life.ru и не только</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-P6SW86D");
+    </script>
+    <!-- End Google Tag Manager -->
+    <title>
+      Как мы делали свой визуальный (WYSIWYG) редактор статей для&nbsp;Life.ru и
+      не только
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="node_modules/@shower/ribbon/styles/styles.css"
+    />
     <style>
-        .shower {
-            --slide-ratio: calc(16 / 9);
-            --ribbon-size: 40px;
-        }
-        .progress::before {
-            background-color: #fa1100;
-        }
-        .slide {
-            padding-top: 51px;
-            background: #fff url(pictures/fcconf_bg.png) no-repeat;
-            background-size: cover;
-        }
-        .slide.clear {
-            background-image: none;
-        }
-        .slide::after {
-            top: auto;
-            bottom: 0;
-            left: 40px;
-            right: auto;
-            color: initial;
-            background: none;
-        }
+      .shower {
+        --slide-ratio: calc(16 / 9);
+        --ribbon-size: 40px;
+      }
+      .progress::before {
+        background-color: #fa1100;
+      }
+      .slide {
+        padding-top: 51px;
+        background: #fff url(pictures/fcconf_bg.png) no-repeat;
+        background-size: cover;
+      }
+      .slide.clear {
+        background-image: none;
+      }
+      .slide::after {
+        top: auto;
+        bottom: 0;
+        left: 40px;
+        right: auto;
+        color: initial;
+        background: none;
+      }
     </style>
-</head>
-<body class="shower list">
-
+  </head>
+  <body class="shower list">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-P6SW86D"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header class="caption">
-        <h1>Как мы делали свой визуальный (WYSIWYG) редактор статей для&nbsp;Life.ru и не только</h1>
-        <p><a href="https://alexey-avdeev.com/">Алексей Авдеев</a>, <a href="https://neuron.digital/">Neuron.Digital</a></p>
+      <h1>
+        Как мы делали свой визуальный (WYSIWYG) редактор статей для&nbsp;Life.ru
+        и не только
+      </h1>
+      <p>
+        <a href="https://alexey-avdeev.com/">Алексей Авдеев</a>,
+        <a href="https://neuron.digital/">Neuron.Digital</a>
+      </p>
     </header>
 
     <section class="slide clear" id="cover">
-        <h2>Как мы делали свой визуальный (WYSIWYG) редактор статей для&nbsp;Life.ru и не только</h2>
-        <p><a href="https://alexey-avdeev.com/">Алексей Авдеев</a>, <a href="https://neuron.digital/">Neuron.Digital</a></p>
-        <figure>
-            <img class="cover h" src="pictures/fcconf_title.png" alt="FrontendConf Background">
-        </figure>
-        <style>
-            #cover h2 {
-                margin: 0;
-                color: #000;
-                font-size:60px;
-            }
-            #cover p {
-                margin: 10px 0 0;
-                color: #000;
-                font-size: 30px;
-            }
-            #cover p a {
-                color: #000;
-            }
-        </style>
+      <h2>
+        Как мы делали свой визуальный (WYSIWYG) редактор статей для&nbsp;Life.ru
+        и не только
+      </h2>
+      <p>
+        <a href="https://alexey-avdeev.com/">Алексей Авдеев</a>,
+        <a href="https://neuron.digital/">Neuron.Digital</a>
+      </p>
+      <figure>
+        <img
+          class="cover h"
+          src="pictures/fcconf_title.png"
+          alt="FrontendConf Background"
+        />
+      </figure>
+      <style>
+        #cover h2 {
+          margin: 0;
+          color: #000;
+          font-size: 60px;
+        }
+        #cover p {
+          margin: 10px 0 0;
+          color: #000;
+          font-size: 30px;
+        }
+        #cover p a {
+          color: #000;
+        }
+      </style>
     </section>
 
     <section class="slide">
-        <h2>👨‍💻 О себе</h2>
+      <h2>👨‍💻 О себе</h2>
 
-        <ol>
-            <li>👨 Алексей Авдеев (<a href="https://github.com/avdeev">https://github.com/avdeev</a>)</li>
-            <li class="next">🏙️ Из Нижнего Новгорода, работаю в Москве</li>
-            <li class="next">🌐 <a href="https://neuron.digital/">Neuron.Digital</a></li>
-            <li class="next">👔 Руковожу командой из 8 фронтенд-разработчиков</li>
-            <!-- больше про команду -->
-            <li class="next">👴 Программирую с 2002 года</li>
-        </ol>
+      <ol>
+        <li>
+          👨 Алексей Авдеев (<a href="https://github.com/avdeev"
+            >https://github.com/avdeev</a
+          >)
+        </li>
+        <li class="next">🏙️ Из Нижнего Новгорода, работаю в Москве</li>
+        <li class="next">
+          🌐 <a href="https://neuron.digital/">Neuron.Digital</a>
+        </li>
+        <li class="next">👔 Руковожу командой из 8 фронтенд-разработчиков</li>
+        <!-- больше про команду -->
+        <li class="next">👴 Программирую с 2002 года</li>
+      </ol>
     </section>
 
     <section class="slide clear">
-        <img class="cover w" src="pictures/back_to_the_future_part1.jpg" alt="">
+      <img class="cover w" src="pictures/back_to_the_future_part1.jpg" alt="" />
     </section>
 
     <section class="slide">
-        <img class="cover" src="pictures/Internet_Archive_logo_and_wordmark.png" alt="" style="height: 70%;">
+      <img
+        class="cover"
+        src="pictures/Internet_Archive_logo_and_wordmark.png"
+        alt=""
+        style="height: 70%"
+      />
     </section>
 
     <section class="slide">
-        <img class="cover" src="pictures/wayback-machine.png" alt="" style="width: 70%;">
+      <img
+        class="cover"
+        src="pictures/wayback-machine.png"
+        alt=""
+        style="width: 70%"
+      />
     </section>
 
     <section class="slide">
-        <img class="cover" src="pictures/lifenews-2010.png" alt="">
+      <img class="cover" src="pictures/lifenews-2010.png" alt="" />
     </section>
 
     <section class="slide">
-        <h2>Статья</h2>
-        <pre style="font-size: 0.9em;">
+      <h2>Статья</h2>
+      <pre style="font-size: 0.9em">
             <code>{</code>
             <code>  title: "Название статьи",</code>
             <code>  <mark>content</mark>: "</code>
@@ -105,12 +166,17 @@
     </section>
 
     <section class="slide clear">
-        <img class="cover" src="pictures/TinyMCE.jpg" alt="" style="height: 90%;">
+      <img
+        class="cover"
+        src="pictures/TinyMCE.jpg"
+        alt=""
+        style="height: 90%"
+      />
     </section>
 
     <section class="slide">
-        <h2>Контент статьи 2009-го года</h2>
-        <pre>
+      <h2>Контент статьи 2009-го года</h2>
+      <pre>
             <code>Привет, РИТ++! Как дела?</code>
             <code class="next">Привет, РИТ++! <mark>&lt;strong&gt;Как&lt;/strong&gt;</mark> дела?</code>
             <code class="next">Привет, РИТ++! <mark>&lt;a href="#"&gt;Как&lt;/a&gt;</mark> дела?</code>
@@ -121,16 +187,21 @@
     </section>
 
     <section class="slide clear">
-        <img class="cover" src="pictures/lifenews-2013.png" alt="">
+      <img class="cover" src="pictures/lifenews-2013.png" alt="" />
     </section>
 
     <section class="slide clear">
-        <img class="cover" src="pictures/tinymce_4.png" alt="" style="height: 90%;">
+      <img
+        class="cover"
+        src="pictures/tinymce_4.png"
+        alt=""
+        style="height: 90%"
+      />
     </section>
 
     <section class="slide">
-        <h2>Обновили TinyMCE</h2>
-        <pre>
+      <h2>Обновили TinyMCE</h2>
+      <pre>
             <code><mark>&lt;p&gt;</mark>Привет, РИТ++! Как дела?<mark>&lt;/p&gt;</mark></code>
             <code class="next"><mark>&lt;div class=&quot;&quot;&gt;&lt;/div&gt;</mark></code>
             <code class="next"><mark>&lt;p&gt;&nbsp;&lt;/p&gt;</mark></code>
@@ -140,28 +211,28 @@
     </section>
 
     <section class="slide clear">
-        <img class="cover" src="pictures/lifenews-2014.png" alt="">
+      <img class="cover" src="pictures/lifenews-2014.png" alt="" />
     </section>
 
     <section class="slide clear">
-        <img class="cover" src="pictures/lifenews-2015.png" alt="">
+      <img class="cover" src="pictures/lifenews-2015.png" alt="" />
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">март 2016</h2>
+      <h2 class="shout" style="font-size: 4.6em">март 2016</h2>
     </section>
 
     <section class="slide clear">
-        <img class="cover" src="pictures/life-2016.png" alt="">
+      <img class="cover" src="pictures/life-2016.png" alt="" />
     </section>
 
     <section class="slide">
-        <h2>Статья</h2>
-        <pre style="font-size: 0.7em;">
+      <h2>Статья</h2>
+      <pre style="font-size: 0.7em">
             <code>{</code>
             <code>  title: "Название статьи",</code>
             <code>  content: "<mark>&lt;ul&gt;</mark></code>
-            <code><mark>    &lt;li&gt;</code>
+            <code><mark>    &lt;li&gt;</mark></code>
             <code><mark>      &lt;span style=&quot;font-size: x-small;&quot;&gt;</mark></code>
             <code><mark>        &lt;span style=&quot;font-size:10px; line-height:16px;&quot;&gt;Элемент&lt;/span&gt;</mark></code>
             <code><mark>      &lt;/span&gt;</mark></code>
@@ -172,12 +243,14 @@
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Угадай элемент<br>по запаху</h2>
+      <h2 class="shout" style="font-size: 4.6em">
+        Угадай элемент<br />по запаху
+      </h2>
     </section>
 
     <section class="slide">
-        <h2>Что это?</h2>
-        <pre>
+      <h2>Что это?</h2>
+      <pre>
             <code>&lt;div class=&quot;quote&quot;&gt;</code>
             <code>  &lt;div&gt;Мы с вами дИвелоперы&lt;/div&gt;</code>
             <code>  &lt;div&gt;Вадим Макеев&lt;/div&gt;</code>
@@ -186,169 +259,263 @@
     </section>
 
     <section class="slide">
-        <h2>Цитата</h2>
-        <img src="pictures/quote-example.png" alt="" style="max-height: calc(100% - 150px); margin: 0 auto; display: block;">
+      <h2>Цитата</h2>
+      <img
+        src="pictures/quote-example.png"
+        alt=""
+        style="max-height: calc(100% - 150px); margin: 0 auto; display: block"
+      />
     </section>
 
     <section class="slide">
-        <h2>Что это?</h2>
-        <code>
-            &lt;p&gt;&lt;iframe class=&quot;medialib-video&quot; title=&quot;&quot; src=&quot;//embed.life.ru/video/b271fca5ff74420e78893b94cce071ca&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; data-extra-autoplay=&quot;0&quot; data-extra-loop=&quot;0&quot; data-extra-title=&quot;&quot; data-extra-description=&quot;&quot; data-extra-send-to-rss=&quot;0&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
-        </code>
+      <h2>Что это?</h2>
+      <code>
+        &lt;p&gt;&lt;iframe class=&quot;medialib-video&quot; title=&quot;&quot;
+        src=&quot;//embed.life.ru/video/b271fca5ff74420e78893b94cce071ca&quot;
+        frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;
+        data-extra-autoplay=&quot;0&quot; data-extra-loop=&quot;0&quot;
+        data-extra-title=&quot;&quot; data-extra-description=&quot;&quot;
+        data-extra-send-to-rss=&quot;0&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+      </code>
     </section>
 
     <section class="slide">
-        <h2>Видео с настройками</h2>
-        <img src="pictures/example-video.png" alt="" style="max-height: calc(100% - 150px); margin: 0 auto; display: block;">
+      <h2>Видео с настройками</h2>
+      <img
+        src="pictures/example-video.png"
+        alt=""
+        style="max-height: calc(100% - 150px); margin: 0 auto; display: block"
+      />
     </section>
 
     <section class="slide">
-        <h2>Что это?</h2>
-        <code style="word-break: break-word;">
-            &lt;div class=&quot;tiny-mce-plugin-societywidget mceNonEditable&quot; data-mce-contenteditable=&quot;false&quot; data-society-code=&quot;PGJsb2NrcXVvdGUgY2xhc3M9InR3aXR0ZXItdHdlZXQiIGRhdGEtbGFuZz0...sb2NrcXVvdGU+CjxzY3JpcHQgYXN5bmMgc3JjPSIvL3BsYXRmb3JtLnR3aXR0ZXIuY29tL3dpZGdldHMuanMiIGNoYXJzZXQ9InV0Zi04Ij48L3NjcmlwdD4=&quot;&gt;
-        </code>
+      <h2>Что это?</h2>
+      <code style="word-break: break-word">
+        &lt;div class=&quot;tiny-mce-plugin-societywidget mceNonEditable&quot;
+        data-mce-contenteditable=&quot;false&quot;
+        data-society-code=&quot;PGJsb2NrcXVvdGUgY2xhc3M9InR3aXR0ZXItdHdlZXQiIGRhdGEtbGFuZz0...sb2NrcXVvdGU+CjxzY3JpcHQgYXN5bmMgc3JjPSIvL3BsYXRmb3JtLnR3aXR0ZXIuY29tL3dpZGdldHMuanMiIGNoYXJzZXQ9InV0Zi04Ij48L3NjcmlwdD4=&quot;&gt;
+      </code>
     </section>
 
     <section class="slide">
-        <h2>Виджет</h2>
-        <img src="pictures/example-widget.png" alt="" style="max-height: calc(100% - 150px); margin: 0 auto; display: block;">
+      <h2>Виджет</h2>
+      <img
+        src="pictures/example-widget.png"
+        alt=""
+        style="max-height: calc(100% - 150px); margin: 0 auto; display: block"
+      />
     </section>
 
     <section class="slide clear">
-        <img class="cover" src="pictures/html-parse.png" alt="">
+      <img class="cover" src="pictures/html-parse.png" alt="" />
     </section>
 
-    <section class="slide clear" style="background-color: #000;">
-        <img class="cover" src="pictures/wat-meme.jpg" alt="">
-    </section>
-
-    <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Контент должен<br>стать богаче</h2>
+    <section class="slide clear" style="background-color: #000">
+      <img class="cover" src="pictures/wat-meme.jpg" alt="" />
     </section>
 
     <section class="slide">
-        <h2>Персона</h2>
-        <img src="pictures/person.png" alt="" style="max-height: calc(100% - 150px); margin: 50px auto 0; display: block;">
+      <h2 class="shout" style="font-size: 4.6em">
+        Контент должен<br />стать богаче
+      </h2>
     </section>
 
     <section class="slide">
-        <h2>Тест</h2>
-        <img src="pictures/test.png" alt="" style="max-height: calc(100% - 150px); margin: 0 auto; display: block;">
+      <h2>Персона</h2>
+      <img
+        src="pictures/person.png"
+        alt=""
+        style="
+          max-height: calc(100% - 150px);
+          margin: 50px auto 0;
+          display: block;
+        "
+      />
     </section>
 
     <section class="slide">
-        <h2>Карточка-текст</h2>
-        <img src="pictures/card-1.png" alt="" style="max-height: calc(100% - 100px); margin: 0 auto; display: block;">
+      <h2>Тест</h2>
+      <img
+        src="pictures/test.png"
+        alt=""
+        style="max-height: calc(100% - 150px); margin: 0 auto; display: block"
+      />
     </section>
 
     <section class="slide">
-        <h2>Карточка-текст с картинкой</h2>
-        <img src="pictures/card-2.png" alt="" style="max-height: calc(100% - 100px); margin: 0 auto; display: block; top: -2px; position: relative; left: -2px;">
+      <h2>Карточка-текст</h2>
+      <img
+        src="pictures/card-1.png"
+        alt=""
+        style="max-height: calc(100% - 100px); margin: 0 auto; display: block"
+      />
     </section>
 
     <section class="slide">
-        <h2>Карточка-картинка</h2>
-        <img src="pictures/card-3.png" alt="" style="max-height: calc(100% - 100px); margin: 0 auto; display: block; top: -6px;
-    position: relative; left: 2px;">
+      <h2>Карточка-текст с картинкой</h2>
+      <img
+        src="pictures/card-2.png"
+        alt=""
+        style="
+          max-height: calc(100% - 100px);
+          margin: 0 auto;
+          display: block;
+          top: -2px;
+          position: relative;
+          left: -2px;
+        "
+      />
     </section>
 
     <section class="slide">
-        <h2>Карточка-цитата</h2>
-        <img src="pictures/card-4.png" alt="" style="max-height: calc(100% - 100px); margin: 0 auto; display: block; top: -3px; position: relative; left: 3px;">
+      <h2>Карточка-картинка</h2>
+      <img
+        src="pictures/card-3.png"
+        alt=""
+        style="
+          max-height: calc(100% - 100px);
+          margin: 0 auto;
+          display: block;
+          top: -6px;
+          position: relative;
+          left: 2px;
+        "
+      />
     </section>
 
     <section class="slide">
-        <h2>Карточка-цитата с картинкой</h2>
-        <img src="pictures/card-5.png" alt="" style="max-height: calc(100% - 100px); margin: 0 auto; display: block; top: 3px; position: relative; left: 5px;">
+      <h2>Карточка-цитата</h2>
+      <img
+        src="pictures/card-4.png"
+        alt=""
+        style="
+          max-height: calc(100% - 100px);
+          margin: 0 auto;
+          display: block;
+          top: -3px;
+          position: relative;
+          left: 3px;
+        "
+      />
     </section>
 
     <section class="slide">
-        <h2>Карточка-видео</h2>
-        <img src="pictures/card-6.png" alt="" style="max-height: calc(100% - 100px); margin: 0 auto; display: block;">
+      <h2>Карточка-цитата с картинкой</h2>
+      <img
+        src="pictures/card-5.png"
+        alt=""
+        style="
+          max-height: calc(100% - 100px);
+          margin: 0 auto;
+          display: block;
+          top: 3px;
+          position: relative;
+          left: 5px;
+        "
+      />
+    </section>
+
+    <section class="slide">
+      <h2>Карточка-видео</h2>
+      <img
+        src="pictures/card-6.png"
+        alt=""
+        style="max-height: calc(100% - 100px); margin: 0 auto; display: block"
+      />
     </section>
 
     <section class="slide clear">
-        <img class="cover w" src="pictures/opossum.jpg" alt="">
+      <img class="cover w" src="pictures/opossum.jpg" alt="" />
     </section>
 
     <section class="slide clear">
-        <img class="cover" src="pictures/word.jpeg" alt="">
+      <img class="cover" src="pictures/word.jpeg" alt="" />
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">HTML не подходит 🚫</h2>
+      <h2 class="shout" style="font-size: 4.6em">HTML не подходит 🚫</h2>
     </section>
 
     <section class="slide clear">
-        <img class="cover" src="pictures/who-are-we.png" alt="">
+      <img class="cover" src="pictures/who-are-we.png" alt="" />
     </section>
 
     <section class="slide">
-        <h2>Что мы хотим❓</h2>
-        <ol style="font-size: 1.4em;">
-            <li>😖 Уйти от HTML (и больше его не видеть)</li>
-            <li class="next">🆕 Легко добавлять новые типы контента</li>
-            <li class="next">🚿 Легко чистить, валидировать, обрабатывать</li>
-            <li class="next">🏛 Современный блочный редактор</li>
-        </ol>
+      <h2>Что мы хотим❓</h2>
+      <ol style="font-size: 1.4em">
+        <li>😖 Уйти от HTML (и больше его не видеть)</li>
+        <li class="next">🆕 Легко добавлять новые типы контента</li>
+        <li class="next">🚿 Легко чистить, валидировать, обрабатывать</li>
+        <li class="next">🏛 Современный блочный редактор</li>
+      </ol>
     </section>
 
     <section class="slide clear">
-        <img class="cover" src="pictures/Life_News_Newsdesk.jpg" alt="">
-        <h2 class="shout" style="color: #fff; text-shadow: 2px 2px 5px #000;">Заказчик</h2>
+      <img class="cover" src="pictures/Life_News_Newsdesk.jpg" alt="" />
+      <h2 class="shout" style="color: #fff; text-shadow: 2px 2px 5px #000">
+        Заказчик
+      </h2>
     </section>
 
     <section class="slide">
-        <h2>💬 О чём говорить</h2>
-        <ol style="font-size: 1.4em;">
-            <li class="next">✈ Потом будет <b>летать</b></li>
-            <li class="next">⛔ Это <b>не помешает</b> работе</li>
-            <li class="next">🌹 <b>Показать</b> красивый дизайн</li>
-        </ol>
+      <h2>💬 О чём говорить</h2>
+      <ol style="font-size: 1.4em">
+        <li class="next">✈ Будет <b>летать</b></li>
+        <li class="next">➕ Будем быстро <b>добавлять</b> фичи</li>
+        <li class="next">⛔ Миграция <b>не помешает</b> работе журналистов</li>
+        <li class="next">🌹 <b>Показать</b> красивый дизайн</li>
+      </ol>
     </section>
 
     <section class="slide">
-        <h2>🎰 Бонусы для нас</h2>
-        <ol style="font-size: 1.4em;">
-            <li class="next">♻ Можно <b>переиспользовать</b> в дальнейшем</li>
-            <li class="next">🆕 <b>Новые технологии</b> интересны разработчикам</li>
-            <li class="next">🗑 <b>Избавляемся</b> от легаси</li>
-        </ol>
+      <h2>🎰 Бонусы для нас</h2>
+      <ol style="font-size: 1.4em">
+        <li class="next">♻ Можно <b>переиспользовать</b> в дальнейшем</li>
+        <li class="next">🆕 <b>Новые технологии</b> интересны разработчикам</li>
+        <li class="next">🗑 <b>Избавляемся</b> от легаси</li>
+      </ol>
     </section>
 
     <section class="slide clear">
-        <img class="cover" src="pictures/PLAN-AAA.jpg" alt="" style="height: 80%;">
+      <img
+        class="cover"
+        src="pictures/PLAN-AAA.jpg"
+        alt=""
+        style="height: 80%"
+      />
     </section>
 
     <section class="slide">
-        <h2>📆 Нормальный план</h2>
-        <ol>
-            <li>🤔 <b>Продумать</b> формат контента</li>
-            <li class="next">📄 <b>Написать</b> документацию по формату</li>
-            <li class="next">🛠 <b>Реализовать</b> редактор</li>
-            <li class="next">🔗 <b>Встроить</b> редактор в админку</li>
-            <li class="next">👴 <b>Мигрировать</b> базу данных</li>
-            <li class="next">👨‍🎨 <b>Вывести</b> новый контент в приложения</li>
-            <li class="next">🆙 <b>Выпустить</b> новый редактор в продакшен</li>
-        </ol>
+      <h2>📆 Нормальный план</h2>
+      <ol>
+        <li>🤔 <b>Продумать</b> формат контента</li>
+        <li class="next">📄 <b>Написать</b> документацию по формату</li>
+        <li class="next">🛠 <b>Реализовать</b> редактор</li>
+        <li class="next">🔗 <b>Встроить</b> редактор в админку</li>
+        <li class="next">👴 <b>Мигрировать</b> базу данных</li>
+        <li class="next">👨‍🎨 <b>Вывести</b> новый контент в приложения</li>
+        <li class="next">🆙 <b>Выпустить</b> новый редактор в продакшен</li>
+      </ol>
     </section>
 
     <section class="slide">
-        <h2>📆 Нормальный план</h2>
-        <ol>
-            <li><mark>🤔 <b>Продумать</b> формат контента</mark></li>
-            <li>📄 <b>Написать</b> документацию по формату</li>
-            <li>🛠 <b>Реализовать</b> редактор</li>
-            <li>🔗 <b>Встроить</b> редактор в админку</li>
-            <li>👴 <b>Мигрировать</b> базу данных</li>
-            <li>👨‍🎨 <b>Вывести</b> новый контент в приложения</li>
-            <li>🆙 <b>Выпустить</b> новый редактор в продакшен</li>
-        </ol>
+      <h2>📆 Нормальный план</h2>
+      <ol>
+        <li>
+          <mark>🤔 <b>Продумать</b> формат контента</mark>
+        </li>
+        <li>📄 <b>Написать</b> документацию по формату</li>
+        <li>🛠 <b>Реализовать</b> редактор</li>
+        <li>🔗 <b>Встроить</b> редактор в админку</li>
+        <li>👴 <b>Мигрировать</b> базу данных</li>
+        <li>👨‍🎨 <b>Вывести</b> новый контент в приложения</li>
+        <li>🆙 <b>Выпустить</b> новый редактор в продакшен</li>
+      </ol>
     </section>
 
     <section class="slide">
-        <h2>👌 Начнём с формата</h2>
-        <pre>
+      <h2>👌 Начнём с формата</h2>
+      <pre>
             <code>[</code>
             <code>  { <mark>type: "TEXT"</mark>, value: "Привет, РИТ++" },</code>
             <code>  { <mark>type: "TEXT"</mark>, value: "Давно не виделись" },</code>
@@ -359,12 +526,12 @@
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Просто работать 🙆</h2>
+      <h2 class="shout" style="font-size: 4.6em">Просто работать 🙆</h2>
     </section>
 
     <section class="slide">
-        <h2>🍫 Выбираем только поддерживаемые блоки</h2>
-        <pre>
+      <h2>🍫 Выбираем только поддерживаемые блоки</h2>
+      <pre>
             <code>content.filter(block => (</code>
             <code>  <mark>['HEADING', 'TEXT']</mark>.includes(block.type)</code>
             <code>))</code>
@@ -372,8 +539,8 @@
     </section>
 
     <section class="slide">
-        <h2>📹 Есть ли видео</h2>
-        <pre>
+      <h2>📹 Есть ли видео</h2>
+      <pre>
             <code>content.some(block => (</code>
             <code>  <mark>block.type === 'VIDEO'</mark></code>
             <code>))</code>
@@ -381,8 +548,8 @@
     </section>
 
     <section class="slide">
-        <h2>🖌 Склеить весь текст</h2>
-        <pre>
+      <h2>🖌 Склеить весь текст</h2>
+      <pre>
             <code>content</code>
             <code>  .filter(block => <mark>block.type === 'TEXT'</mark>)</code>
             <code>  .reduce((accumulator, block) => (</code>
@@ -392,16 +559,16 @@
     </section>
 
     <section class="slide clear">
-        <img class="cover" src="pictures/kaif.png" alt="">
+      <img class="cover" src="pictures/kaif.png" alt="" />
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Как форматировать текст?</h2>
+      <h2 class="shout" style="font-size: 4.6em">Как форматировать текст?</h2>
     </section>
 
     <section class="slide">
-        <h2>Вариант 1. Оставить HTML</h2>
-        <pre>
+      <h2>Вариант 1. Оставить HTML</h2>
+      <pre>
             <code>{ value: "Привет, РИТ++! <mark>&lt;i&gt;Как&lt;/i&gt;</mark> дела?" },</code>
             <code class="next">{ value: "Привет, РИТ++! <mark>&lt;b&gt;Как&lt;/b&gt;</mark> дела?" },</code>
             <code class="next">{ value: "Привет, РИТ++! <mark>&lt;u&gt;Как&lt;/u&gt;</mark> дела?" },</code>
@@ -411,8 +578,8 @@
     </section>
 
     <section class="slide">
-        <h2>Вариант 2. Взять Markdown</h2>
-        <pre>
+      <h2>Вариант 2. Взять Markdown</h2>
+      <pre>
             <code>{ value: "Это <mark>*курсив*</mark> и это тоже <mark>_курсив_</mark>" },</code>
             <code class="next">{ value: "Это <mark>**жирный**</mark> и это тоже <mark>__жирный__</mark>" },</code>
             <code class="next">{ value: "Это <mark>`важный`</mark> текст" },</code>
@@ -421,29 +588,36 @@
     </section>
 
     <section class="slide">
-        <h2 class="shout">Тоже JSON</h2>
+      <h2 class="shout">Тоже JSON</h2>
     </section>
 
     <section class="slide clear">
-        <img class="cover" src="pictures/why.jpg" alt="" style="height: 90%;">
+      <img class="cover" src="pictures/why.jpg" alt="" style="height: 90%" />
     </section>
 
-    <section class="slide clear" style="background-color: #843131;">
-        <img class="cover" src="pictures/draft-js.png" alt="">
-    </section>
-
-    <section class="slide">
-        <h2 class="shout" style="font-size: 3.3em;">
-            <img src="pictures/github-logo.png" alt="" style="width: 120px; vertical-align: middle;">
-            <a href="https://github.com/facebook/draft-js" style="vertical-align: middle;">
-                facebook/draft-js
-            </a>
-        </h2>
+    <section class="slide clear" style="background-color: #843131">
+      <img class="cover" src="pictures/draft-js.png" alt="" />
     </section>
 
     <section class="slide">
-        <h2>👨‍🔬 Формат Draft.js</h2>
-        <pre style="font-size: 0.7em">
+      <h2 class="shout" style="font-size: 3.3em">
+        <img
+          src="pictures/github-logo.png"
+          alt=""
+          style="width: 120px; vertical-align: middle"
+        />
+        <a
+          href="https://github.com/facebook/draft-js"
+          style="vertical-align: middle"
+        >
+          facebook/draft-js
+        </a>
+      </h2>
+    </section>
+
+    <section class="slide">
+      <h2>👨‍🔬 Формат Draft.js</h2>
+      <pre style="font-size: 0.7em">
             <code>import { <mark>Editor, EditorState</mark> } from 'draft-js';</code>
             <code>class MyEditor extends React.Component {</code>
             <code>  state = { editorState: <mark>EditorState.createEmpty()</mark> };</code>
@@ -458,8 +632,8 @@
     </section>
 
     <section class="slide">
-        <h2>👨‍🔬 Формат Draft.js</h2>
-        <pre style="font-size: 0.9em">
+      <h2>👨‍🔬 Формат Draft.js</h2>
+      <pre style="font-size: 0.9em">
             <code>{ blockMap: { '4iabc': {</code>
             <code>    type: 'unstyled',</code>
             <code>    <mark>text: 'АБ'</mark>,</code>
@@ -472,34 +646,46 @@
     </section>
 
     <section class="slide clear">
-        <img class="cover" src="pictures/draftjs-issue.png" alt="">
+      <img class="cover" src="pictures/draftjs-issue.png" alt="" />
     </section>
 
     <section class="slide clear">
-        <img class="cover" src="pictures/draftjs-prs.jpeg" alt="">
+      <img class="cover" src="pictures/draftjs-prs.jpeg" alt="" />
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 3.3em;">
-            <img src="pictures/github-logo.png" alt="" style="width: 120px; vertical-align: middle;">
-            <a href="https://github.com/nikgraf/awesome-draft-js" style="vertical-align: middle;">
-                nikgraf/awesome-draft-js
-            </a>
-        </h2>
+      <h2 class="shout" style="font-size: 3.3em">
+        <img
+          src="pictures/github-logo.png"
+          alt=""
+          style="width: 120px; vertical-align: middle"
+        />
+        <a
+          href="https://github.com/nikgraf/awesome-draft-js"
+          style="vertical-align: middle"
+        >
+          nikgraf/awesome-draft-js
+        </a>
+      </h2>
     </section>
 
     <section class="slide clear">
-        <img class="cover" src="pictures/draftjs-editors.png" alt="">
+      <img class="cover" src="pictures/draftjs-editors.png" alt="" />
     </section>
 
     <section class="slide clear">
-        <img class="cover" src="pictures/draftjs-utilites.png" alt="">
-        <img class="next" src="pictures/baturin.jpeg" alt="" style="position: absolute; bottom: 0; right: 0; width: 400px;">
+      <img class="cover" src="pictures/draftjs-utilites.png" alt="" />
+      <img
+        class="next"
+        src="pictures/baturin.jpeg"
+        alt=""
+        style="position: absolute; bottom: 0; right: 0; width: 400px"
+      />
     </section>
 
     <section class="slide">
-        <h2>Итог</h2>
-        <pre>
+      <h2>Итог</h2>
+      <pre>
             <code>[{ type: "TEXT", value: {</code>
             <code><mark>  blockMap: { '4iabc': {</mark></code>
             <code><mark>    type: 'unstyled',</mark></code>
@@ -509,103 +695,125 @@
             <code>}]</code>
         </pre>
 
-        <img class="next" src="pictures/xzibit-original-meme.jpg" alt="" style="position: absolute; bottom: 0; right: 0; width: 400px;">
+      <img
+        class="next"
+        src="pictures/xzibit-original-meme.jpg"
+        alt=""
+        style="position: absolute; bottom: 0; right: 0; width: 400px"
+      />
     </section>
 
     <section class="slide">
-        <h2>📆 Нормальный план</h2>
-        <ol>
-            <li>🤔 <b>Продумать</b> формат контента</li>
-            <li><mark>📄 <b>Написать</b> документацию по формату</mark></li>
-            <li>🛠 <b>Реализовать</b> редактор</li>
-            <li>🔗 <b>Встроить</b> редактор в админку</li>
-            <li>👴 <b>Мигрировать</b> базу данных</li>
-            <li>👨‍🎨 <b>Вывести</b> новый контент в приложения</li>
-            <li>🆙 <b>Выпустить</b> новый редактор в продакшен</li>
-        </ol>
+      <h2>📆 Нормальный план</h2>
+      <ol>
+        <li>🤔 <b>Продумать</b> формат контента</li>
+        <li>
+          <mark>📄 <b>Написать</b> документацию по формату</mark>
+        </li>
+        <li>🛠 <b>Реализовать</b> редактор</li>
+        <li>🔗 <b>Встроить</b> редактор в админку</li>
+        <li>👴 <b>Мигрировать</b> базу данных</li>
+        <li>👨‍🎨 <b>Вывести</b> новый контент в приложения</li>
+        <li>🆙 <b>Выпустить</b> новый редактор в продакшен</li>
+      </ol>
     </section>
 
     <section class="slide">
-        <img class="cover" src="pictures/jsonschema.png" alt="">
+      <img class="cover" src="pictures/jsonschema.png" alt="" />
     </section>
 
     <section class="slide">
-        <img class="cover" src="pictures/jsonscheme-1.png" alt="">
+      <img class="cover" src="pictures/jsonscheme-1.png" alt="" />
     </section>
 
     <section class="slide">
-        <img class="cover" src="pictures/jsonscheme-2.png" alt="">
+      <img class="cover" src="pictures/jsonscheme-2.png" alt="" />
     </section>
 
     <section class="slide">
-        <img class="cover" src="pictures/jsonscheme-3.png" alt="">
+      <img class="cover" src="pictures/jsonscheme-3.png" alt="" />
     </section>
 
     <section class="slide">
-        <img class="cover" src="pictures/jsonscheme-4.png" alt="">
+      <img class="cover" src="pictures/jsonscheme-4.png" alt="" />
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 3.3em;">
-            <img src="pictures/github-logo.png" alt="" style="width: 120px; vertical-align: middle;">
-            <a href="https://github.com/lbovet/docson" target="_blank" style="vertical-align: middle;">
-                lbovet/docson
-            </a>
-        </h2>
+      <h2 class="shout" style="font-size: 3.3em">
+        <img
+          src="pictures/github-logo.png"
+          alt=""
+          style="width: 120px; vertical-align: middle"
+        />
+        <a
+          href="https://github.com/lbovet/docson"
+          target="_blank"
+          style="vertical-align: middle"
+        >
+          lbovet/docson
+        </a>
+      </h2>
     </section>
 
     <section class="slide">
-        <img class="cover" src="pictures/docson-1.png" alt="">
+      <img class="cover" src="pictures/docson-1.png" alt="" />
     </section>
 
     <section class="slide">
-        <img class="cover" src="pictures/docson-2.png" alt="">
+      <img class="cover" src="pictures/docson-2.png" alt="" />
     </section>
 
     <section class="slide">
-        <img class="cover" src="pictures/docson-3.png" alt="">
+      <img class="cover" src="pictures/docson-3.png" alt="" />
     </section>
 
     <section class="slide">
-        <img class="cover" src="pictures/docson-4.png" alt="">
+      <img class="cover" src="pictures/docson-4.png" alt="" />
     </section>
 
     <section class="slide">
-        <h2>📆 Нормальный план</h2>
-        <ol>
-            <li>🤔 <b>Продумать</b> формат контента</li>
-            <li>📄 <b>Написать</b> документацию по формату</li>
-            <li><mark>🛠 <b>Реализовать</b> редактор</mark></li>
-            <li>🔗 <b>Встроить</b> редактор в админку</li>
-            <li>👴 <b>Мигрировать</b> базу данных</li>
-            <li>👨‍🎨 <b>Вывести</b> новый контент в приложения</li>
-            <li>🆙 <b>Выпустить</b> новый редактор в продакшен</li>
-        </ol>
+      <h2>📆 Нормальный план</h2>
+      <ol>
+        <li>🤔 <b>Продумать</b> формат контента</li>
+        <li>📄 <b>Написать</b> документацию по формату</li>
+        <li>
+          <mark>🛠 <b>Реализовать</b> редактор</mark>
+        </li>
+        <li>🔗 <b>Встроить</b> редактор в админку</li>
+        <li>👴 <b>Мигрировать</b> базу данных</li>
+        <li>👨‍🎨 <b>Вывести</b> новый контент в приложения</li>
+        <li>🆙 <b>Выпустить</b> новый редактор в продакшен</li>
+      </ol>
     </section>
 
     <section class="slide">
-        <h2>Берём</h2>
-        <ol>
-            <li>🔬 React</li>
-            <li class="next">🔬 Immutable.js</li>
-            <li class="next">🔬 Redux</li>
-            <li class="next">🔬 Redux-saga</li>
-            <li class="next">👨‍💻 Senior Frontend Developer (Мишу)</li>
-            <img class="next" src="pictures/mkhazov.jpg" alt="" style="position: absolute; bottom: 0; right: -115px; width: 400px;">
-            <li class="next">📆 План</li>
-        </ol>
+      <h2>Берём</h2>
+      <ol>
+        <li>🔬 React</li>
+        <li class="next">🔬 Immutable.js</li>
+        <li class="next">🔬 Redux</li>
+        <li class="next">🔬 Redux-saga</li>
+        <li class="next">👨‍💻 Senior Frontend Developer (Мишу)</li>
+        <img
+          class="next"
+          src="pictures/mkhazov.jpg"
+          alt=""
+          style="position: absolute; bottom: 0; right: -115px; width: 400px"
+        />
+        <li class="next">📆 План</li>
+      </ol>
     </section>
 
     <section class="slide clear">
-        <img class="cover" src="pictures/contributing.png" alt="">
+      <img class="cover" src="pictures/contributing.png" alt="" />
     </section>
 
     <!-- Можно дописать интересных моментов во время реализации -->
     <section class="slide">
-        <img class="cover" src="pictures/editor-1.png" alt="">
+      <img class="cover" src="pictures/editor-1.png" alt="" />
     </section>
 
-<!--     <section class="slide">
+    <!--     <section class="slide">
         <img class="cover" src="pictures/editor-1-1.png" alt="">
     </section>
 
@@ -630,75 +838,84 @@
     </section> -->
 
     <section class="slide">
-        <h2>📆 Нормальный план</h2>
-        <ol>
-            <li>🤔 <b>Продумать</b> формат контента</li>
-            <li>📄 <b>Написать</b> документацию по формату</li>
-            <li>🛠 <b>Реализовать</b> редактор</li>
-            <li><mark>🔗 <b>Встроить</b> редактор в админку</mark></li>
-            <li>👴 <b>Мигрировать</b> базу данных</li>
-            <li>👨‍🎨 <b>Вывести</b> новый контент в приложения</li>
-            <li>🆙 <b>Выпустить</b> новый редактор в продакшен</li>
-        </ol>
+      <h2>📆 Нормальный план</h2>
+      <ol>
+        <li>🤔 <b>Продумать</b> формат контента</li>
+        <li>📄 <b>Написать</b> документацию по формату</li>
+        <li>🛠 <b>Реализовать</b> редактор</li>
+        <li>
+          <mark>🔗 <b>Встроить</b> редактор в админку</mark>
+        </li>
+        <li>👴 <b>Мигрировать</b> базу данных</li>
+        <li>👨‍🎨 <b>Вывести</b> новый контент в приложения</li>
+        <li>🆙 <b>Выпустить</b> новый редактор в продакшен</li>
+      </ol>
     </section>
 
     <section class="slide">
-        <h2>Как можно встроить?</h2>
-        <ol>
-            <li class="next">
-                <b>Как часть приложения</b>
-                <ul>
-                    <li class="next">Кладём код внутрь админки</li>
-                </ul>
-            </li>
-            <li class="next">
-                <b>Как модуль</b>
-                <ul>
-                    <li class="next">NPM / Bower</li>
-                    <li class="next">CDN</li>
-                </ul>
-            </li>
-            <li class="next">
-                <b>Как сервис</b>
-                <ul>
-                    <li class="next">Iframe</li>
-                </ul>
-            </li>
-        </ol>
+      <h2>Как можно встроить?</h2>
+      <ol>
+        <li class="next">
+          <b>Как часть приложения</b>
+          <ul>
+            <li class="next">Кладём код внутрь админки</li>
+          </ul>
+        </li>
+        <li class="next">
+          <b>Как модуль</b>
+          <ul>
+            <li class="next">NPM / Bower</li>
+            <li class="next">CDN</li>
+          </ul>
+        </li>
+        <li class="next">
+          <b>Как сервис</b>
+          <ul>
+            <li class="next">Iframe</li>
+          </ul>
+        </li>
+      </ol>
     </section>
 
     <section class="slide clear">
-        <img class="cover" src="pictures/iframe.png" alt="">
+      <img class="cover" src="pictures/iframe.png" alt="" />
     </section>
 
-    <section class="slide clear" style="background-color: #ac9374;">
-        <img class="cover" src="pictures/postmessage.jpg" alt="">
-    </section>
-
-    <section class="slide clear">
-        <img class="cover" src="pictures/uml-postmessage.png" alt="" style="height: 90%;">
+    <section class="slide clear" style="background-color: #ac9374">
+      <img class="cover" src="pictures/postmessage.jpg" alt="" />
     </section>
 
     <section class="slide clear">
-        <img class="cover" src="pictures/life-admin-example.png" alt="">
+      <img
+        class="cover"
+        src="pictures/uml-postmessage.png"
+        alt=""
+        style="height: 90%"
+      />
+    </section>
+
+    <section class="slide clear">
+      <img class="cover" src="pictures/life-admin-example.png" alt="" />
     </section>
 
     <section class="slide">
-        <h2>📆 Нормальный план</h2>
-        <ol>
-            <li>🤔 <b>Продумать</b> формат контента</li>
-            <li>📄 <b>Написать</b> документацию по формату</li>
-            <li>🛠 <b>Реализовать</b> редактор</li>
-            <li>🔗 <b>Встроить</b> редактор в админку</li>
-            <li><mark>👴 <b>Мигрировать</b> базу данных</mark></li>
-            <li>👨‍🎨 <b>Вывести</b> новый контент в приложения</li>
-            <li>🆙 <b>Выпустить</b> новый редактор в продакшен</li>
-        </ol>
+      <h2>📆 Нормальный план</h2>
+      <ol>
+        <li>🤔 <b>Продумать</b> формат контента</li>
+        <li>📄 <b>Написать</b> документацию по формату</li>
+        <li>🛠 <b>Реализовать</b> редактор</li>
+        <li>🔗 <b>Встроить</b> редактор в админку</li>
+        <li>
+          <mark>👴 <b>Мигрировать</b> базу данных</mark>
+        </li>
+        <li>👨‍🎨 <b>Вывести</b> новый контент в приложения</li>
+        <li>🆙 <b>Выпустить</b> новый редактор в продакшен</li>
+      </ol>
     </section>
 
     <section class="slide">
-        <h2>👴 Было</h2>
-        <pre>
+      <h2>👴 Было</h2>
+      <pre>
             <code>{</code>
             <code>  title: "Название статьи",</code>
             <code>  <mark>content: "&lt;p&gt;Тут какой-то старый контент&lt;/p&gt;",</mark></code>
@@ -707,12 +924,12 @@
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Полиморфизм</h2>
+      <h2 class="shout" style="font-size: 4.6em">Полиморфизм</h2>
     </section>
 
     <section class="slide">
-        <h2>👌 Стало</h2>
-        <pre>
+      <h2>👌 Стало</h2>
+      <pre>
             <code>{</code>
             <code>  title: "Название статьи",</code>
             <code>  content: {</code>
@@ -724,8 +941,8 @@
     </section>
 
     <section class="slide">
-        <h2>👌 Стало</h2>
-        <pre>
+      <h2>👌 Стало</h2>
+      <pre>
             <code>{</code>
             <code>  title: "Название статьи",</code>
             <code>  content: {</code>
@@ -735,38 +952,50 @@
             <code>}</code>
         </pre>
 
-        <img class="next" src="pictures/xzibit-original-meme.jpg" alt="" style="position: absolute; bottom: 0; right: 0; width: 400px;">
+      <img
+        class="next"
+        src="pictures/xzibit-original-meme.jpg"
+        alt=""
+        style="position: absolute; bottom: 0; right: 0; width: 400px"
+      />
     </section>
 
     <section class="slide">
-        <h2>📆 Нормальный план</h2>
-        <ol>
-            <li>🤔 <b>Продумать</b> формат контента</li>
-            <li>📄 <b>Написать</b> документацию по формату</li>
-            <li>🛠 <b>Реализовать</b> редактор</li>
-            <li>🔗 <b>Встроить</b> редактор в админку</li>
-            <li>👴 <b>Мигрировать</b> базу данных</li>
-            <li><mark>👨‍🎨 <b>Вывести</b> новый контент в приложения</mark></li>
-            <li>🆙 <b>Выпустить</b> новый редактор в продакшен</mark></li>
-        </ol>
+      <h2>📆 Нормальный план</h2>
+      <ol>
+        <li>🤔 <b>Продумать</b> формат контента</li>
+        <li>📄 <b>Написать</b> документацию по формату</li>
+        <li>🛠 <b>Реализовать</b> редактор</li>
+        <li>🔗 <b>Встроить</b> редактор в админку</li>
+        <li>👴 <b>Мигрировать</b> базу данных</li>
+        <li>
+          <mark>👨‍🎨 <b>Вывести</b> новый контент в приложения</mark>
+        </li>
+        <li>🆙 <b>Выпустить</b> новый редактор в продакшен</li>
+      </ol>
     </section>
 
     <section class="slide clear">
-        <img class="cover" src="pictures/liferu-gadjets.png" alt="" style="height: 90%;">
+      <img
+        class="cover"
+        src="pictures/liferu-gadjets.png"
+        alt=""
+        style="height: 90%"
+      />
     </section>
 
     <section class="slide">
-        <h2>⚙️ Схема рендера контента</h2>
-        <ol style="font-size: 1.4em;">
-            <li class="next">🔃 В цикле перебираем все блоки</li>
-            <li class="next">📄 Каждый блок передаём в свой шаблон</li>
-            <li class="next">🆙 Draft.js рендерим дополнительно</li>
-        </ol>
+      <h2>⚙️ Схема рендера контента</h2>
+      <ol style="font-size: 1.4em">
+        <li class="next">🔃 В цикле перебираем все блоки</li>
+        <li class="next">📄 Каждый блок передаём в свой шаблон</li>
+        <li class="next">🆙 Draft.js рендерим дополнительно</li>
+      </ol>
     </section>
 
     <section class="slide">
-        <h2>Сайт life.ru (сервер, Go)</h2>
-        <pre style="font-size: 0.85em;">
+      <h2>Сайт life.ru (сервер, Go)</h2>
+      <pre style="font-size: 0.85em">
             <code>func FormatJSON(content string, template *template.Template) string {</code>
             <code>  contentBlocks := []Decorator{}</code>
             <code>  var buffer bytes.Buffer</code>
@@ -779,8 +1008,8 @@
     </section>
 
     <section class="slide">
-        <h2>Сайт life.ru (клиент, CoffeeScript)</h2>
-        <pre style="font-size: 0.85em;">
+      <h2>Сайт life.ru (клиент, CoffeeScript)</h2>
+      <pre style="font-size: 0.85em">
             <code>window.formatJSON = (content) -></code>
             <code>  result = ''</code>
             <code>  try contentBlocks = JSON.parse content</code>
@@ -792,18 +1021,26 @@
     </section>
 
     <section class="slide">
-        <h2>Мобильные приложения (этап I)</h2>
-        <img src="pictures/mobile-1.png" alt="" style="max-height: calc(100% - 150px); margin: 0 auto; display: block;">
+      <h2>Мобильные приложения (этап I)</h2>
+      <img
+        src="pictures/mobile-1.png"
+        alt=""
+        style="max-height: calc(100% - 150px); margin: 0 auto; display: block"
+      />
     </section>
 
     <section class="slide">
-        <h2>Мобильные приложения (этап II)</h2>
-        <img src="pictures/mobile-2.png" alt="" style="max-height: calc(100% - 150px); margin: 0 auto; display: block;">
+      <h2>Мобильные приложения (этап II)</h2>
+      <img
+        src="pictures/mobile-2.png"
+        alt=""
+        style="max-height: calc(100% - 150px); margin: 0 auto; display: block"
+      />
     </section>
 
     <section class="slide">
-        <h2>RSS-ленты (Ruby)</h2>
-        <pre style="font-size: 0.85em;">
+      <h2>RSS-ленты (Ruby)</h2>
+      <pre style="font-size: 0.85em">
             <code>items.select {|el| %w(TEXT).include?(el[:type]) }.each do |item|</code>
             <code>  element = nil</code>
             <code>  case item[:type]</code>
@@ -816,85 +1053,112 @@
     </section>
 
     <section class="slide">
-        <h2>📆 Нормальный план</h2>
-        <ol>
-            <li>🤔 <b>Продумать</b> формат контента</li>
-            <li>📄 <b>Написать</b> документацию по формату</li>
-            <li>🛠 <b>Реализовать</b> редактор</li>
-            <li>🔗 <b>Встроить</b> редактор в админку</li>
-            <li>👴 <b>Мигрировать</b> базу данных</li>
-            <li>👨‍🎨 <b>Вывести</b> новый контент в приложения</li>
-            <li><mark>🆙 <b>Выпустить</b> новый редактор в продакшен</mark></li>
-        </ol>
+      <h2>📆 Нормальный план</h2>
+      <ol>
+        <li>🤔 <b>Продумать</b> формат контента</li>
+        <li>📄 <b>Написать</b> документацию по формату</li>
+        <li>🛠 <b>Реализовать</b> редактор</li>
+        <li>🔗 <b>Встроить</b> редактор в админку</li>
+        <li>👴 <b>Мигрировать</b> базу данных</li>
+        <li>👨‍🎨 <b>Вывести</b> новый контент в приложения</li>
+        <li>
+          <mark>🆙 <b>Выпустить</b> новый редактор в продакшен</mark>
+        </li>
+      </ol>
     </section>
 
     <section class="slide">
-        <h2 class="shout">Post-release<br>Beta</h2>
+      <h2 class="shout">Post-release<br />Beta</h2>
     </section>
 
     <section class="slide">
-        <h2>🆙 Схема миграции</h2>
-        <ol>
-            <li>➕ Добавляем новый редактор отдельной фичей</li>
-            <li class="next">🔁 Два редактора работают одновременно</li>
-            <li class="next">🛠 Новый редактор дорабатывается</li>
-            <li class="next">📉 Процент использования старого редактора уменьшается</li>
-            <li class="next">✂ Старый редактор выпиливается</li>
-            <li class="next"><s>Старый контент превращается в новый</s></li>
-            <li class="next"><s>Поддержка старого контента убирается</s></li>
-        </ol>
+      <h2>🆙 Схема миграции</h2>
+      <ol>
+        <li>➕ Добавляем новый редактор отдельной фичей</li>
+        <li class="next">🔁 Два редактора работают одновременно</li>
+        <li class="next">🛠 Новый редактор дорабатывается</li>
+        <li class="next">
+          📉 Процент использования старого редактора уменьшается
+        </li>
+        <li class="next">✂ Старый редактор выпиливается</li>
+        <li class="next"><s>Старый контент превращается в новый</s></li>
+        <li class="next"><s>Поддержка старого контента убирается</s></li>
+      </ol>
     </section>
 
     <section class="slide">
-        <img class="cover" src="pictures/queen-original.png" alt="">
-        <img class="next" src="pictures/but.png" alt="" style="position: absolute; top: 200px; left: 463px; width: 120px;">
+      <img class="cover" src="pictures/queen-original.png" alt="" />
+      <img
+        class="next"
+        src="pictures/but.png"
+        alt=""
+        style="position: absolute; top: 200px; left: 463px; width: 120px"
+      />
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Обратно несовместимые<br>изменения контента ⚠</h2>
+      <h2 class="shout" style="font-size: 4.6em">
+        Обратно несовместимые<br />изменения контента ⚠
+      </h2>
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">MAJOR.MINOR.PATCH</h2>
+      <h2 class="shout" style="font-size: 4.6em">MAJOR.MINOR.PATCH</h2>
     </section>
 
     <section class="slide">
-        <h2>Семантическое версионирование (SemVer)</h2>
-        <ol style="font-size: 1.1em;">
-            <li style="margin-bottom: 20px; line-height: 1.8em;"><b>МАЖОРНАЯ</b>, когда сделаны обратно несовместимые изменения API</li>
-            <li class="next" style="margin-bottom: 20px; line-height: 1.8em;"><b>МИНОРНАЯ</b>, когда вы добавляете новую функциональность, не нарушая обратной совместимости</li>
-            <li class="next" style="margin-bottom: 20px; line-height: 1.8em;"><b>ПАТЧ</b>, когда вы делаете обратно совместимые исправления</li>
-        </ol>
+      <h2>Семантическое версионирование (SemVer)</h2>
+      <ol style="font-size: 1.1em">
+        <li style="margin-bottom: 20px; line-height: 1.8em">
+          <b>МАЖОРНАЯ</b>, когда сделаны обратно несовместимые изменения API
+        </li>
+        <li class="next" style="margin-bottom: 20px; line-height: 1.8em">
+          <b>МИНОРНАЯ</b>, когда вы добавляете новую функциональность, не
+          нарушая обратной совместимости
+        </li>
+        <li class="next" style="margin-bottom: 20px; line-height: 1.8em">
+          <b>ПАТЧ</b>, когда вы делаете обратно совместимые исправления
+        </li>
+      </ol>
     </section>
 
     <section class="slide clear">
-        <img class="cover w" src="pictures/дрейк-комикс-оригинал.png" alt="">
+      <img class="cover w" src="pictures/дрейк-комикс-оригинал.png" alt="" />
     </section>
 
     <section class="slide clear">
-        <img class="cover h" src="pictures/Y3e9Xi-lw.png" alt="">
+      <img class="cover h" src="pictures/Y3e9Xi-lw.png" alt="" />
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 3.6em;">MODEL-REVISION-ADDITION</h2>
+      <h2 class="shout" style="font-size: 3.6em">MODEL-REVISION-ADDITION</h2>
     </section>
 
     <section class="slide">
-        <h2>SchemaVer</h2>
-        <ol style="font-size: 1.1em;">
-            <li style="margin-bottom: 20px; line-height: 1.8em;"><b>МОДЕЛЬ</b>, когда вы вносите критическое изменение схемы, которое предотвратит взаимодействие с любыми историческими данными</li>
-            <li class="next" style="margin-bottom: 20px; line-height: 1.8em;"><b>РЕВИЗИЯ</b>, когда вы вносите изменение схемы, которое может помешать взаимодействию с некоторыми историческими данными</li>
-            <li class="next" style="margin-bottom: 20px; line-height: 1.8em;"><b>ДОПОЛНЕНИЕ</b> при внесении изменений в схему, совместимых со всеми историческими данными</li>
-        </ol>
+      <h2>SchemaVer</h2>
+      <ol style="font-size: 1.1em">
+        <li style="margin-bottom: 20px; line-height: 1.8em">
+          <b>МОДЕЛЬ</b>, когда вы вносите критическое изменение схемы, которое
+          предотвратит взаимодействие с любыми историческими данными
+        </li>
+        <li class="next" style="margin-bottom: 20px; line-height: 1.8em">
+          <b>РЕВИЗИЯ</b>, когда вы вносите изменение схемы, которое может
+          помешать взаимодействию с некоторыми историческими данными
+        </li>
+        <li class="next" style="margin-bottom: 20px; line-height: 1.8em">
+          <b>ДОПОЛНЕНИЕ</b> при внесении изменений в схему, совместимых со всеми
+          историческими данными
+        </li>
+      </ol>
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Куда писать версию?</h2>
+      <h2 class="shout" style="font-size: 4.6em">Куда писать версию?</h2>
     </section>
 
     <section class="slide">
-        <h2>👌 Наш контент</h2>
-        <pre>
+      <h2>👌 Наш контент</h2>
+      <pre>
             <code>[</code>
             <code>  { <mark>type: "TEXT"</mark>, value: "Привет, РИТ++" },</code>
             <code>  { <mark>type: "TEXT"</mark>, value: "Давно не виделись" },</code>
@@ -905,8 +1169,8 @@
     </section>
 
     <section class="slide">
-        <h2>👌 Как надо было</h2>
-        <pre>
+      <h2>👌 Как надо было</h2>
+      <pre>
             <code>{</code>
             <code>  <mark>blocks</mark>: [</code>
             <code>    { type: "TEXT", value: "Привет, РИТ++" },</code>
@@ -922,42 +1186,50 @@
     <!-- Возможное будущее редактора -->
 
     <section class="slide">
-        <h2>👨‍🏫 Уроки</h2>
+      <h2>👨‍🏫 Уроки</h2>
 
-        <ol style="font-size: 1.1em;">
-            <li class="next">💪 Всё возможно</li>
-            <li class="next">💭 Думайте о расширяемости</li>
-            <li class="next">📆 Составляйте планы (дорожные карты)</li>
-            <li class="next">📚 Вокруг множество хороших технологий</li>
-            <li class="next">😱 Избегайте &laquo;большого взрыва&raquo;</li>
-        </ol>
+      <ol style="font-size: 1.1em">
+        <li class="next">💪 Всё возможно</li>
+        <li class="next">💭 Думайте о расширяемости</li>
+        <li class="next">📆 Составляйте планы (дорожные карты)</li>
+        <li class="next">📚 Вокруг множество хороших технологий</li>
+        <li class="next">😱 Избегайте &laquo;большого взрыва&raquo;</li>
+      </ol>
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Редактируйте контент<br>правильно ✍</h2>
+      <h2 class="shout" style="font-size: 4.6em">
+        Редактируйте контент<br />правильно ✍
+      </h2>
     </section>
 
     <section class="slide">
-        <h2>👏 Спасибо! Вопросы?</h2>
+      <h2>👏 Спасибо! Вопросы?</h2>
 
-        <ul>
-            <li>👨 Алексей Авдеев</li>
-            <li>🌐 <a href="https://github.com/avdeev">https://github.com/avdeev</a></li>
-            <li>🌐 <a href="https://neuron.digital/">Neuron.Digital</a></li>
-        </ul>
+      <ul>
+        <li>👨 Алексей Авдеев</li>
+        <li>
+          🌐 <a href="https://github.com/avdeev">https://github.com/avdeev</a>
+        </li>
+        <li>🌐 <a href="https://neuron.digital/">Neuron.Digital</a></li>
+      </ul>
 
-        <img src="pictures/iam.jpg" alt="я" style="height: 250px; position: absolute; right: 80px; top: 141px;">
+      <img
+        src="pictures/iam.jpg"
+        alt="я"
+        style="height: 250px; position: absolute; right: 80px; top: 141px"
+      />
     </section>
 
     <!-- Материалы к докладу: https://medium.com/p/426427efe63c -->
 
     <footer class="badge">
-        <a href="https://github.com/shower/shower">Powered by Shower</a>
+      <a href="https://github.com/shower/shower">Powered by Shower</a>
     </footer>
 
     <div class="progress"></div>
 
     <script src="shower/shower.min.js"></script>
     <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
-</body>
+  </body>
 </html>
